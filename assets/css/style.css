@@ -58,18 +58,17 @@ DATA:
     border: 0;
     box-sizing: border-box;
     text-decoration: none;
-    font-family: 'raleway', sans-serif;
+    font-family: 'Raleway', sans-serif;
     list-style: none; 
-    color: #23272A; 
 }
 
 html {
     font-size: 16px;
-    color: black;
+    color: var(--text-color); 
 }
 
 body {
-    background-color: lightblue;
+    background-color: #333;
 }
 
 h1 {
@@ -86,6 +85,14 @@ p {
     font-size: 1rem;
     font-weight: 400;
     color: #555;
+}
+
+a {
+    font-size: 0.75rem;
+    color: var(--text-color);
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
 img {
@@ -105,8 +112,43 @@ button {
 }
 
 /*****************************************
-            ESTILO DO HEADER
+            ESTILO DO NAV
 ******************************************/
 
+nav {
+    background-color: var(--nav-bg-color);
+    padding: 12px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
+nav .logo-topo img {
+    width: 160px;
+}
+
+nav a {
+    margin-right: 24px ;
+    font-weight: 700;
+}
+
+nav a.assinatura {
+    background-color: var(--tertiary-color);
+    padding: 8px 26px;
+    border-radius: 50px;
+    transition: background-color 1s, color 1s;
+}
+
+nav a.assinatura:hover {
+    background-color: var(--btn-link-bg-color) ;
+    color: var(--btn-link-color);
+}
+
+
+
+
+
+/*****************************************
+            ESTILO DO HEADER
+******************************************/
 
