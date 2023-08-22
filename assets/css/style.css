@@ -68,7 +68,7 @@ html {
 }
 
 body {
-    background-color: #333;
+    background-color: var(--primary-color);
 }
 
 h1 {
@@ -98,10 +98,6 @@ a {
 
 img {
     max-width: 100%;
-}
-
-button {
-    cursor: pointer;
 }
 
 .button {
@@ -184,7 +180,7 @@ nav a.assinatura:hover {
 ******************************************/
 
 header {
-    background: #333;
+    background: var(--primary-color);
     padding: 100px 0 300px;
     margin-top: 50px;
 
@@ -250,3 +246,7 @@ header .button:hover {
     outline: 3px solid var(--secondary-color);
     transition: background 1s, outline 1s;
 }
+
+/*****************************************
+            ESTILO DO MAIN
+******************************************/
