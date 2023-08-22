@@ -259,17 +259,11 @@ main {
 }
 
 main .container {
-    #background-color: blue;
     width: 100%;
     max-width: 1200px;
     height: auto;
     margin: 0 auto;
     padding: 24px;
-    text-align: center;
-}
-
-main .container h2 {
-    text-transform: none;
 }
 
 main .container .section1 {
@@ -277,8 +271,18 @@ main .container .section1 {
     width: 100%;
     height: auto;
     display: flex;
-    justify-content: center;
-    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+}
+
+main .container .section1 h2 {
+    text-transform: none;
+    text-align: center;
+}
+
+main .container .section1 div.content {
+    display: flex;
     gap: 80px;
 }
 
