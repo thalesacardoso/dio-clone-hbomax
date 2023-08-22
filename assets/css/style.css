@@ -79,7 +79,7 @@ h1 {
 
 h2 {
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: 500;
     text-transform: uppercase;
 }
 
@@ -107,6 +107,7 @@ img {
     cursor: pointer;
     font-weight: 700;
     text-transform: uppercase;
+    text-align: center;
     letter-spacing: 4px;
     color: var(--text-color);
 }
@@ -223,6 +224,7 @@ header .preco p.ff-quicksand {
 
 header .preco h2 {
     font-size: 2.5rem;
+    font-weight: 700;
 }
 
 header .preco h2 span {
@@ -236,17 +238,121 @@ header .button {
     background-size: 250%;
     font-size: 1rem;
     animation: efeito 1s alternate infinite;
-    outline: 3px solid transparent;
-    
+    outline: 2px solid transparent;
+    transition: background 1s, outline 1s;
 }
 
 header .button:hover {
     background: transparent;
-    background-size: 0%;
-    outline: 3px solid var(--secondary-color);
+    background-size: 100%;
+    outline: 2px solid var(--secondary-color);
     transition: background 1s, outline 1s;
 }
 
 /*****************************************
             ESTILO DO MAIN
 ******************************************/
+main {
+    background: url('../images/background-movies-series.png');
+    width: 100%;
+    height: 750px;
+}
+
+main .container {
+    #background-color: blue;
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    margin: 0 auto;
+    padding: 24px;
+    text-align: center;
+}
+
+main .container h2 {
+    text-transform: none;
+}
+
+main .container .section1 {
+    margin: 40px 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 80px;
+}
+
+main .plano {
+    background: var(--card-bg-color);
+    width: 100%;
+    max-width: 520px;
+    min-height: 600px;
+    padding: 40px 60px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 100px;
+    text-align: left;
+}
+
+main .plano .titulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 16px;
+}
+
+main .plano .titulo h3.titulo-tipo {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+main .plano .titulo .preco {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+main .plano .titulo .preco span {
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--text-color);
+}
+
+main .plano ul li {
+    font-size: 1.25rem;
+    margin-bottom: 14px;
+    padding-left: 14px;
+    list-style:disc;
+}
+
+main .plano ul li::marker {
+    content: "+";
+    font-size: 30px;
+}
+
+
+main .plano .button {
+    background: var(--btn-bg-color-gradient);
+    background-size: 250%;
+    font-size: 0.75rem;
+    outline: 2px solid transparent;
+    transition: background 1s, outline 1s, transform 1s;
+}
+
+main .plano .button:hover {
+    background: transparent;
+    background-size: 100%;
+    outline: 2px solid var(--secondary-color);
+    transform: scale(1.05);
+    transition: background 1s, outline 1s, transform 1s;
+}
+
+
+
+
+footer {
+    height: 1000px;
+}
