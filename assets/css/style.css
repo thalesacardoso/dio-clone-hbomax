@@ -337,7 +337,6 @@ main .plano ul li::marker {
     font-size: 30px;
 }
 
-
 main .plano .button {
     background: var(--btn-bg-color-gradient);
     background-size: 250%;
@@ -353,6 +352,8 @@ main .plano .button:hover {
     transform: scale(1.05);
     transition: background 1s, outline 1s, transform 1s;
 }
+
+/*** ESTILO SEÇÃO 2 ****/
 
 
 
