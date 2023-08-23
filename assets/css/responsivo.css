@@ -42,7 +42,7 @@ DATA:
     VERSÃO P/ TABLET
 *******************************/
 
-@media screen and (min-width:480px) and (max-width: 799.99px) {
+@media screen and (min-width:490px) and (max-width: 799.99px) {
     nav {
         flex-wrap: wrap;
     }
@@ -81,7 +81,155 @@ DATA:
     VERSÃO P/ SMARTPHONE
 *******************************/
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 490px) {
 
-   
+    nav {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    nav .logo-topo img {
+        height: 15px;
+    }
+
+    main#principal {
+        background-image: none;
+    }
+
+    main#principal .section2 {
+        margin: 100px 0;
+    }
+
+    main#principal .section2 h2 {
+        text-align: center;
+    }
+
+    main#principal .content {
+        display: flex;
+        flex-direction: column;
+        gap: 100px;
+    }
+
+    main#principal .plano {
+        max-width: 600px;
+    }
+
+    main#principal .plano .titulo {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    main#principal .plano .titulo p.preco {
+        font-size: 1.5rem;
+    }
+
+    main#principal .plano li {
+        font-size: 1rem;
+    }
+        
+    main#principal .content:has(.plano:nth-child(1):hover) .plano:nth-child(2) {
+        transform: rotateY(0);
+    }
+
+    main#principal .content:has(.plano:nth-child(2):hover) .plano:nth-child(1) {
+        transform: rotateY(0);
+    }
+
+    main#principal .section2 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    main .section2 .cartao {
+        display: grid;
+        grid-template-columns: repeat(6, 100%);
+        grid-auto-flow: column;
+        overflow: auto hidden;
+        gap: 32px;
+    }
+    
+    main .cartao .card {
+        border-radius: 16px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        border: 2px solid transparent;
+        transition: transform 0.8s, background 0.8s, border 1s;
+    }
+
+    main .cartao .card:hover {
+        transform: scale(1);
+    }
+    
+    main .cartao img {
+        opacity: 1;
+        transition: opacity 1s;
+    }
+
+    main .cartao img {
+        opacity: 1;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+        transition: opacity 2s;
+    }
+
+    main .card img:link {
+        opacity: 0;
+        transition: opacity 1s;
+    }
+    
+    main .cartao .card1 {
+        background-image: url(../images/DC-Hover.webp);
+    }
+    
+    main .cartao .card2 {
+        background-image: url(../images/MAX-Hover.webp);
+    }
+    
+    main .cartao .card3 {
+        background-image: url(../images/hbo-hover_0.webp);
+    }
+    
+    main .cartao .card4 {
+        background-image: url(../images/UCL-Hover.webp);
+    }
+    
+    main .cartao .card5 {
+        background-image: url(../images/WB-Hover.webp);
+    }
+    
+    main .cartao .card6 {
+        background-image: url(../images/CN-Hover.png);
+    }
+
+    footer .links {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    /************ PAGINA LOGIN*************/
+
+    #pg-login .acao {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        gap: 20px;
+    }
+
+    #pg-login .acao a {
+        margin: 0;
+    }
+
+    #pg-login footer .links {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+    }
 }
