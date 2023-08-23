@@ -573,6 +573,10 @@ footer .redes-sociais img {
     font-size: 1rem;
 }
 
+#pg-login .formulario input:invalid {
+    border-color: var(--form-field-error);
+}
+
 #pg-login .formulario input::placeholder {
     color: var(--form-field-placeholder);
 }
