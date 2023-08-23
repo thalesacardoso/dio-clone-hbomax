@@ -276,7 +276,7 @@ header .button:hover {
 /*****************************************
             ESTILO DO MAIN
 ******************************************/
-main {
+main#principal {
     background: url('../images/background-movies-series.png');
     background-repeat: no-repeat;
     background-size: contain;
@@ -479,6 +479,7 @@ footer .container {
     margin: 0 auto;
     padding: 24px;
     display: flex;
+    text-align: center;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -518,4 +519,88 @@ footer .redes-sociais {
 
 footer .redes-sociais img {
     max-width: 100%;
+}
+
+
+
+/*****************************************
+            ESTILO DA PÁGINA LOGIN
+******************************************/
+
+#pg-login {
+    background: url('../images/background-movies-series.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 80px;
+}
+
+#pg-login .container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#pg-login .formulario {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    background: var(--form-bg-color);
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+#pg-login .formulario h1 {
+    font-size: 1.25rem;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+#pg-login .formulario label {
+    font-size: 1rem;
+    text-align: left;
+}
+
+#pg-login .formulario input {
+    background-color: var(--form-field-bg-color);
+    border: var(--form-field-border);
+    border-radius: 8px;
+    padding: 16px;
+    color: var(--text-color);    
+    font-size: 1rem;
+}
+
+#pg-login .formulario input::placeholder {
+    color: var(--form-field-placeholder);
+}
+
+#pg-login .formulario .acao {
+    margin-top: 24px;
+}
+
+#pg-login .formulario .acao .button {
+    background: var(--btn-bg-color-gradient);
+    background-size: 250%;
+    outline: 2px solid transparent;
+    transition: background 1s, outline 1s;    
+    font-size: 0.875rem;
+}
+
+#pg-login .formulario .acao .button:hover {
+    background: transparent;
+    background-size: 100%;
+    outline: 2px solid var(--secondary-color);
+    transition: background 1s, outline 1s;
+}
+
+#pg-login .acao a {    
+    margin-left: 24px;
+    color: var(--link-color);
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: none;
+    letter-spacing: normal;
 }
