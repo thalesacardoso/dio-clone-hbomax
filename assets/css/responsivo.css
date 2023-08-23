@@ -1,0 +1,36 @@
+/*
+DESENVOLVIDO POR: Thales A. Cardoso
+GITHUB: https://github.com/thalesacardoso
+DATA: 
+*/
+
+/*****************************************
+            LAYOUT NOTEBOOK
+******************************************/
+
+@media screen and (min-width:800px) and (max-width: 1050px) {
+ nav {
+    background-color: red;
+ }
+    
+}
+
+
+/*******************************
+    VERSÃO P/ TABLET
+*******************************/
+
+@media screen and (min-width:450px) and (max-width: 799.99px) {
+
+
+}
+
+
+/*******************************
+    VERSÃO P/ SMARTPHONE
+*******************************/
+
+@media screen and (max-width: 450px) {
+
+   
+}
