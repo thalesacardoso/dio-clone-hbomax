@@ -308,7 +308,7 @@ main .container .section1 h2 {
 
 main .container .section1 div.content {
     display: flex;
-    gap: 80px;
+    gap: 40px;
     perspective: 2000px;
     perspective-origin: top;
 }
