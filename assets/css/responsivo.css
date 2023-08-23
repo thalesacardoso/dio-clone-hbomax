@@ -42,15 +42,39 @@ DATA:
     VERSÃO P/ TABLET
 *******************************/
 
-@media screen and (min-width:450px) and (max-width: 799.99px) {
+@media screen and (min-width:480px) and (max-width: 799.99px) {
+    nav {
+        flex-wrap: wrap;
+    }
 
-    
+    main#principal {
+        background-image: none;
+    }
 
+    main#principal .content {
+        display: flex;
+        flex-direction: column;
+        gap: 100px;
+    }
+
+    main#principal .plano {
+        max-width: 600px;
+    }
+        
+    main#principal .content:has(.plano:nth-child(1):hover) .plano:nth-child(2) {
+        transform: rotateY(0);
+    }
+
+    main#principal .content:has(.plano:nth-child(2):hover) .plano:nth-child(1) {
+        transform: rotateY(0);
+    }
+
+    main#principal .cartao {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+    }
 }
-
-
-
-
 
 
 /*******************************
