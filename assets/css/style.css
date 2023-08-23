@@ -11,20 +11,16 @@ DATA:
     --primary-color: #020228;
     --secondary-color: #ff00e5;
     --tertiary-color: #b535f6;
-    --btn-bg-color-gradient: linear-gradient(
-      45deg,
-      #9b34ef 0%,
-      #490cb0 20%,
-      transparent 50%
-    );
+    --btn-bg-color-gradient: linear-gradient(45deg,
+            #9b34ef 0%,
+            #490cb0 20%,
+            transparent 50%);
     --btn-link-bg-color: #fff;
     --btn-link-color: #000;
     --card-bg-color: linear-gradient(0deg, transparent, #3b1e63);
-    --divider-bg-color: linear-gradient(
-      90deg,
-      #5516ba,
-      rgba(255, 0, 229, 0.5) 80%
-    );
+    --divider-bg-color: linear-gradient(90deg,
+            #5516ba,
+            rgba(255, 0, 229, 0.5) 80%);
     --nav-bg-color: rgba(0, 0, 0, 0.3);
     --text-color: #fff;
     --link-color: #9e86ff;
@@ -35,22 +31,22 @@ DATA:
     --form-field-error: rgb(255, 76, 76);
 
     scroll-behavior: smooth;
-  }
+}
 
-    /* Custom Scroll */
+/* Custom Scroll */
 
-    ::-webkit-scrollbar {
-        width: 8px;
-      }
-    
-      ::-webkit-scrollbar-thumb {
-        background: var(--tertiary-color);
-        border-radius: 10px;
-      }
-    
-      ::-webkit-scrollbar-thumb:hover {
-        background: var(--secondary-color);
-      }
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--tertiary-color);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
+}
 
 * {
     margin: 0;
@@ -59,12 +55,12 @@ DATA:
     box-sizing: border-box;
     text-decoration: none;
     font-family: 'Raleway', sans-serif;
-    list-style: none; 
+    list-style: none;
 }
 
 html {
     font-size: 16px;
-    color: var(--text-color); 
+    color: var(--text-color);
 }
 
 body {
@@ -117,7 +113,7 @@ img {
 }
 
 .ff-quicksand {
-    font-family:'Quicksand';
+    font-family: 'Quicksand';
 }
 
 @keyframes efeito {
@@ -152,6 +148,7 @@ nav {
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
+    z-index: 1;
 }
 
 nav .logo-topo img {
@@ -159,7 +156,7 @@ nav .logo-topo img {
 }
 
 nav a {
-    margin-right: 24px ;
+    margin-right: 24px;
     font-weight: 700;
 }
 
@@ -171,7 +168,7 @@ nav a.assinatura {
 }
 
 nav a.assinatura:hover {
-    background-color: var(--btn-link-bg-color) ;
+    background-color: var(--btn-link-bg-color);
     color: var(--btn-link-color);
 }
 
@@ -181,10 +178,37 @@ nav a.assinatura:hover {
 ******************************************/
 
 header {
-    background: var(--primary-color);
+    background: linear-gradient(-45deg, #56125b, #0f0f10, #271e6e);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite alternate;
     padding: 100px 0 300px;
     margin-top: 50px;
+    position: relative;
+}
 
+header::after {
+    content: "";
+    width: 100%;
+    height: 250px;
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(0deg, var(--primary-color), transparent);
+}
+
+/**** animação ****/
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 header .container {
@@ -285,6 +309,8 @@ main .container .section1 h2 {
 main .container .section1 div.content {
     display: flex;
     gap: 80px;
+    perspective: 2000px;
+    perspective-origin: top;
 }
 
 main .plano {
@@ -299,6 +325,15 @@ main .plano {
     justify-content: space-between;
     gap: 100px;
     text-align: left;
+    transition: transform 1s ease-in-out;
+}
+
+.content:has(.plano:nth-child(1):hover) .plano:nth-child(2) {
+    transform: rotateY(-45deg);
+}
+
+.content:has(.plano:nth-child(2):hover) .plano:nth-child(1) {
+    transform: rotateY(45deg);
 }
 
 main .plano .titulo {
@@ -355,7 +390,7 @@ main .plano .button:hover {
 
 
 
-                /*** ESTILO SEÇÃO 2 ****/
+/*** ESTILO SEÇÃO 2 ****/
 
 
 
@@ -373,7 +408,7 @@ main .section2 h2 {
 
 main .section2 .cartao {
     display: grid;
-    grid-template-columns: repeat(3 , 1fr);
+    grid-template-columns: repeat(3, 1fr);
     margin-top: 40px;
     gap: 40px;
 }
@@ -460,6 +495,11 @@ footer .links a {
     font-size: 0.875rem;
     font-weight: bold;
     text-transform: uppercase;
+    transition: color 1s;
+}
+
+footer .links a:hover {
+    color: var(--text-color);
 }
 
 footer p.small {
